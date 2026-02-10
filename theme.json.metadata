@@ -1,0 +1,214 @@
+{
+  "name": "govpress",
+  "title": "GovPress",
+  "description": "Professional WordPress theme for government and public-sector websites. Enterprise-standard design system with accessibility and security built-in.",
+  "version": "2.0.0",
+  "author": "Seyi Ajibare",
+  "authorUrl": "oseyiajibare@gmail.com",
+  "license": "GPL-2.0-or-later",
+  "licenseUrl": "https://www.gnu.org/licenses/gpl-2.0.html",
+  "textDomain": "govpress",
+  "domainPath": "/languages",
+  "requiresWordPress": "6.0",
+  "requiresPhp": "7.4",
+  "tested": "6.4",
+  "tags": [
+    "government",
+    "accessibility-ready",
+    "responsive",
+    "gutenberg",
+    "enterprise",
+    "wcag-2.1-aa"
+  ],
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/oseyiajibare/GovPress"
+    }
+  ],
+  "support": {
+    "docs": "https://github.com/oseyiajibare/GovPress/wiki",
+    "issues": "https://github.com/oseyiajibare/GovPress/issues",
+    "forum": "https://wordpress.org/support/theme/GovPress/",
+    "security": "oseyiajibare@gmail.com"
+  },
+  "features": {
+    "accessibility": {
+      "wcagCompliance": "2.1-aa",
+      "semanticHtml": true,
+      "keyboardNavigation": true,
+      "screenReaderOptimized": true,
+      "skipLinks": true,
+      "ariaSupport": true
+    },
+    "security": {
+      "securityHeaders": true,
+      "contentSecurityPolicy": true,
+      "inputSanitization": true,
+      "outputEscaping": true,
+      "nonceProtection": true,
+      "capabilityChecking": true
+    },
+    "performance": {
+      "lazyLoading": true,
+      "criticalCss": true,
+      "assetVersioning": true,
+      "conditionalLoading": true,
+      "blockThemeSupport": true
+    },
+    "seo": {
+      "metaTags": true,
+      "structuredData": true,
+      "canonicalUrls": true,
+      "robotsMeta": true
+    }
+  },
+  "customPostTypes": [
+    {
+      "name": "notice",
+      "label": "Notices",
+      "description": "Important announcements and alerts"
+    },
+    {
+      "name": "publication",
+      "label": "Publications",
+      "description": "Downloadable documents and resources"
+    },
+    {
+      "name": "press_release",
+      "label": "Press Releases",
+      "description": "Official news and media updates"
+    },
+    {
+      "name": "document",
+      "label": "Documents",
+      "description": "Organized document library"
+    }
+  ],
+  "customTaxonomies": [
+    {
+      "name": "department",
+      "label": "Departments",
+      "description": "Organize content by government departments",
+      "postTypes": ["post", "notice", "publication", "press_release", "document"]
+    },
+    {
+      "name": "document_type",
+      "label": "Document Types",
+      "description": "Categorize documents by type",
+      "postTypes": ["document"]
+    }
+  ],
+  "gutenbergBlocks": [
+    {
+      "name": "govpress/alert-notice",
+      "label": "Alert Notice",
+      "description": "Display styled alerts (info, warning, error, success)"
+    },
+    {
+      "name": "govpress/download-document",
+      "label": "Download Document",
+      "description": "Display downloadable files with metadata"
+    },
+    {
+      "name": "govpress/service-card",
+      "label": "Service Card",
+      "description": "Feature government services"
+    },
+    {
+      "name": "govpress/announcement-banner",
+      "label": "Announcement Banner",
+      "description": "Prominent site-wide announcements"
+    }
+  ],
+  "widgetAreas": [
+    {
+      "id": "sidebar-1",
+      "name": "Sidebar",
+      "description": "Primary sidebar widget area"
+    },
+    {
+      "id": "footer-1",
+      "name": "Footer Widget Area 1",
+      "description": "First footer widget area"
+    },
+    {
+      "id": "footer-2",
+      "name": "Footer Widget Area 2",
+      "description": "Second footer widget area"
+    },
+    {
+      "id": "footer-3",
+      "name": "Footer Widget Area 3",
+      "description": "Third footer widget area"
+    }
+  ],
+  "menuLocations": [
+    {
+      "location": "primary",
+      "name": "Primary Menu"
+    },
+    {
+      "location": "footer",
+      "name": "Footer Menu"
+    }
+  ],
+  "assets": {
+    "stylesheets": [
+      {
+        "handle": "govpress-main",
+        "path": "assets/css/main.css",
+        "inline": false
+      },
+      {
+        "handle": "govpress-blocks",
+        "path": "assets/css/blocks.css",
+        "inline": false
+      },
+      {
+        "handle": "govpress-components",
+        "path": "assets/css/components.css",
+        "inline": false
+      }
+    ],
+    "scripts": [
+      {
+        "handle": "govpress-navigation",
+        "path": "assets/js/navigation.js",
+        "footer": true,
+        "localize": "govpressL10n"
+      },
+      {
+        "handle": "govpress-blocks-js",
+        "path": "assets/js/blocks.js",
+        "footer": true,
+        "dependencies": ["jquery"]
+      }
+    ]
+  },
+  "compatibility": {
+    "wordpress": {
+      "minimum": "6.0",
+      "tested": "6.4"
+    },
+    "php": {
+      "minimum": "7.4",
+      "recommended": "8.1"
+    },
+    "browsers": {
+      "chrome": "latest 2 versions",
+      "firefox": "latest 2 versions",
+      "safari": "latest 2 versions",
+      "edge": "latest 2 versions"
+    }
+  },
+  "codeQuality": {
+    "standards": "WordPress Coding Standards",
+    "documentation": "PHPDoc and JSDoc",
+    "testing": ["axe DevTools", "WAVE", "Lighthouse"],
+    "security": "OWASP Top 10"
+  },
+  "changelog": "CHANGELOG.md",
+  "contributing": "CONTRIBUTING.md",
+  "readme": "README.md"
+}
